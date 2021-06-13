@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> Weather App |by Mohit kumar</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'>
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            max-width: 50%;
+            margin: auto;
+            color: #444;
+        }
+        
+        .container {
+            max-width: 50%;
+            margin: auto;
+        }
+        
+        .inputText {
+            width: 350px;
+            height: 30px;
+            margin-top: 15px;
+        }
+        
+        #weather-button {
+            height: 35px;
+        }
+        
+        #weather-button:hover {
+            background-color: darkblue;
+            color: white;
+        }
+        
+        .weather-card {
+            width: 455px;
+            height: 250px;
+            margin-top: 15px;
+            box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.29);
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .title {
+            margin-top: 10px;
+            font-size: 32px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .nature {
+            font-size: 16px;
+            color: #666;
+            padding-left: 10px;
+        }
+        
+        .timing {
+            display: flex;
+        }
+        
+        .spacing {
+            display: flex;
+        }
+        
+        .temperature {
+            font-size: 30px;
+            margin-top: 10px;
+            color: coral;
+        }
+        
+        .other-info {
+            margin-top: 10px;
+        }
+        
+        .weather-image {
+            margin-top: 50%;
+        }
+        
+        .city-name {
+            color: coral;
+        }
+        
+        .max-min {
+            font-size: 16px;
+            color: #666;
+            margin-left: 10px;
+            padding-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <input class="inputText" type="text" placeholder="Enter City">
+
+        <button onclick="getWeather()" id="weather-button">Get Weather</button>
+
+        <div class="weather-card">
+            <div class="left">
+                <div class="title">
+                    <span class="city-name">Pune</span> ,<span class="country">  India</span>
+                    <div class="timing">
+                        <div class="subtitle">Sat, May 29, </div>
+                        <div class="nature"> Cloudy</div>
+                    </div>
+                </div>
+                <div class="spacing">
+                    <div class="temperature">
+                        25° C
+                    </div>
+
+                    <div class="max-min">25/31</div>
+                </div>
+                <div class="other-info">
+                    Humidity: <span class="humidity"> 35%</span>
+                </div>
+                <div class="other-info">
+                    Wind: <span class="wspeed">7</span>Km/h
+                </div>
+                <div class="other-info">
+                    Air pressure: <span class="air-press">1001</span> &nbsp;Pascals
+                </div>
+
+            </div>
+            <div class="right">
+                <img class="weather-image" id="w-image" height="100px" src="https://meta-weather.vercel.app/static/img/weather/s.svg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
